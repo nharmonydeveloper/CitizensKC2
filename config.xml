@@ -20,10 +20,10 @@
 <widget xmlns     = "http://www.w3.org/ns/widgets"
         id        = "io.cordova.helloCordova"
         version   = "2.0.0">
-    <name>Citizens Bank Trust</name>
+    <name>Citizens Bank &amp; Trust</name>
 
     <description>
-        Citizens Bank Trust
+        Citizens Bank &amp; Trust
     </description>
 
     <author href="http://nharmony.com" email="development@nharmony.com">
