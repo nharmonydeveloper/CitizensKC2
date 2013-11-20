@@ -33,10 +33,7 @@
     <access origin="http://clients.nharmony.com/" subdomains="true"/>
     
     <preference name="permissions" value="none" />
-    
-    <feature name="Geolocation">
-      <param name="android-package" value="org.apache.cordova.GeoBroker"/>
-    </feature>
+    <feature name="http://api.phonegap.com/1.0/geolocation"/>
 
     <content src="index.html" />
 
