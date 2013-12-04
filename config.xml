@@ -38,12 +38,5 @@
     <content src="index.html" />
 
 
-    <icon gap:platform="android" src="AndroidIcon.png" gap:density="ldpi" />
-    <icon gap:platform="android" src="AndroidIcon.png" gap:density="mdpi" />
-    <icon gap:platform="android" src="AndroidIcon.png" gap:density="hdpi" />
-    <icon gap:platform="android" src="AndroidIcon.png" gap:density="xhdpi" />
-    <icon gap:platform="android" src="AndroidIcon.png" gap:density="xxhdpi" />
-    <icon src="Icon.png" />
-
 
 </widget>
