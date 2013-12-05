@@ -1,42 +1,1 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!--
- Licensed to the Apache Software Foundation (ASF) under one
- or more contributor license agreements.  See the NOTICE file
- distributed with this work for additional information
- regarding copyright ownership.  The ASF licenses this file
- to you under the Apache License, Version 2.0 (the
- "License"); you may not use this file except in compliance
- with the License.  You may obtain a copy of the License at
-
- http://www.apache.org/licenses/LICENSE-2.0
-
- Unless required by applicable law or agreed to in writing,
- software distributed under the License is distributed on an
- "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
- KIND, either express or implied.  See the License for the
- specific language governing permissions and limitations
- under the License.
--->
-<widget xmlns     = "http://www.w3.org/ns/widgets"
-        id        = "com.nharmony.citizenskc"
-        version   = "2.0.0">
-    <name>Citizens Bank &amp; Trust</name>
-
-    <description>
-        Citizens Bank &amp; Trust
-    </description>
-
-    <author href="http://nharmony.com" email="development@nharmony.com">
-        nHarmony, Inc.
-    </author>
-
-    <access origin="http://clients.nharmony.com/" subdomains="true"/>
-    
-    <preference name="permissions" value="none" />
-    <feature name="http://api.phonegap.com/1.0/geolocation"/>
-
-    <content src="index.html" />
-
-
-
-</widget>
+<?xml version="1.0" encoding="UTF-8"?><!-- Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements.  See the NOTICE file distributed with this work for additional information regarding copyright ownership.  The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License.  You may obtain a copy of the License at http://www.apache.org/licenses/LICENSE-2.0 Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.  See the License for the specific language governing permissions and limitations under the License.--><widget xmlns     = "http://www.w3.org/ns/widgets"        id        = "com.nharmony.citizenskc"        version   = "2.0.0">    <name>Citizens Bank &amp; Trust</name>    <description>        Citizens Bank &amp; Trust    </description>    <author href="http://nharmony.com" email="development@nharmony.com">        nHarmony, Inc.    </author>		<preference name="phonegap-version" value="3.1.0" />		<preference name="orientation" value="default" />		<preference name="target-device" value="universal" />		<preference name="fullscreen" value="true" />		<preference name="webviewbounce" value="true" />		<preference name="prerendered-icon" value="true" />		<preference name="stay-in-webview" value="true" />		<preference name="ios-statusbarstyle" value="default" />		<preference name="detect-data-types" value="true" />		<preference name="exit-on-suspend" value="true" />		<preference name="show-splash-screen-spinner" value="true" />		<preference name="auto-hide-splash-screen" value="true" />		<preference name="disable-cursor" value="true" />		<preference name="android-minSdkVersion" value="7" />		<preference name="android-installLocation" value="internalOnly" />		<preference name="splash-screen-duration" value="5000" />		<preference name="load-url-timeout" value="20000" />		<gap:platform name="ios" />		<gap:platform name="android" />		<gap:platform name="winphone" />		<gap:plugin name="org.apache.cordova.media-capture"  />		<gap:plugin name="org.apache.cordova.camera"  />		<gap:plugin name="org.apache.cordova.geolocation"  />		<gap:plugin name="org.apache.cordova.device"  />		<gap:plugin name="org.apache.cordova.device-motion"  />		<gap:plugin name="org.apache.cordova.network-information"  />		<gap:plugin name="org.apache.cordova.contacts"  />		<gap:plugin name="org.apache.cordova.dialogs"  />		<gap:plugin name="org.apache.cordova.globalization"  />		<gap:plugin name="org.apache.cordova.console"  />		<gap:plugin name="org.apache.cordova.audiohandler"  />		<gap:plugin name="org.apache.cordova.battery-status"  />		<gap:plugin name="org.apache.cordova.file"  />		<gap:plugin name="org.apache.cordova.device-orientation"  />		<gap:plugin name="org.apache.cordova.file-transfer"  />		<gap:plugin name="org.apache.cordova.splashscreen"  />		<gap:plugin name="org.apache.cordova.vibration"  />		<gap:plugin name="org.apache.cordova.inappbrowser"  />		<icon src="AndroidIcon.png" gap:platform="ios" width="57" height="57" />		<icon src="AndroidIcon.png" gap:platform="ios" width="72" height="72" />		<icon src="AndroidIcon.png" gap:platform="ios" width="114" height="114" />		<icon src="AndroidIcon.png" gap:platform="ios" width="144" height="144" />		<icon src="AndroidIcon.png" gap:platform="ios" width="76" height="76" />		<icon src="AndroidIcon.png" gap:platform="ios" width="120" height="120" />		<icon src="AndroidIcon.png" gap:platform="ios" width="152" height="152" />		<icon src="AndroidIcon.png" gap:platform="android" gap:density="ldpi" />		<icon src="AndroidIcon.png" gap:platform="android" gap:density="mdpi" />		<icon src="AndroidIcon.png" gap:platform="android" gap:density="hdpi" />		<icon src="AndroidIcon.png" gap:platform="android" gap:density="xhdpi" />		<icon src="AndroidIcon.png" gap:platform="android" gap:density="xxhdpi" />    <access origin="http://clients.nharmony.com/" subdomains="true"/>        <preference name="permissions" value="none" />    <feature name="http://api.phonegap.com/1.0/geolocation"/>    <content src="index.html" /></widget>
