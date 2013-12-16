@@ -13,7 +13,7 @@
 
         function onDeviceReady(){
             alert('3. On device ready');
-            navigator.network.isReachable("clients.nharmony.com", function(reachability){ alert('4. Network Callback called'); }, {} );
+            navigator.network.isReachable("http://clients.nharmony.com", function(reachability){ alert('4. Network Callback called'); }, {} );
         }
 
         // function startApp(reachability){
