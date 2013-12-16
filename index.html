@@ -1,10 +1,34 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-<title>Cordova</title>
+<title>Citizens KC</title>
+
+<script type="text/javascript" charset="utf-8" src="js/util/cordova.js"></script>
 <script type="text/javascript">
-	// window.location.href="http://citizenskc.dev";
-	window.location.href="http://clients.nharmony.com/";
+	
+	document.addEventListener("deviceready", onDeviceReady, false);
+
+	function onDeviceReady(){
+		navigator.network.isReachable("clients.nharmony.com",startApp, {})
+	}
+
+	function startApp(){
+
+        var networkState = reachability.code || reachability;
+
+        var states = {};
+        states[NetworkStatus.NOT_REACHABLE]                      = 'No network connection';
+        states[NetworkStatus.REACHABLE_VIA_CARRIER_DATA_NETWORK] = 'Carrier data connection';
+        states[NetworkStatus.REACHABLE_VIA_WIFI_NETWORK]         = 'WiFi connection';
+
+        if(states[networkState] === 'NOT_REACHABLE'){
+        	alert('Connection type: ' + states[networkState]);
+        }
+        else {
+			window.location.href="http://clients.nharmony.com/";
+        }
+	}
+	
 </script>
 </head>
 <body></body>
