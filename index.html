@@ -4,14 +4,19 @@
         <title>Citizens KC</title>
         <script type="text/javascript" charset="utf-8" src="/js/util/cordova.js"></script>
         <script type="text/javascript">
+        alert('initalize');
 
         document.addEventListener("deviceready", onDeviceReady, false);
 
+        alert('even listener');
+
         function onDeviceReady(){
+            alert('one device ready');
             navigator.network.isReachable("clients.nharmony.com", startApp, {});
         }
 
         function startApp(){
+            alert('start app');
             var networkState = reachability.code || reachability;
 
             var states = {};
@@ -20,12 +25,14 @@
                 states[NetworkStatus.REACHABLE_VIA_WIFI_NETWORK]         = 'WiFi connection';
             
             alert('Connection type: ' + states[networkState]);
+            
+            window.location.href="http://clients.nharmony.com/";
         }
         // if(states[networkState] === 'NOT_REACHABLE'){
         // }
         // else {
-        alert('test');
-        window.location.href="http://clients.nharmony.com/";
+        alert('all done');
+
 
         // }
         </script>
