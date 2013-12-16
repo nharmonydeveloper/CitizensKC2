@@ -1,54 +1,32 @@
 <!DOCTYPE HTML>
 <html>
-    <head>
-        <title>Citizens KC</title>
-        <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
-        <script type="text/javascript">
-        alert('1. Initialize');
+<head>
+<title>Citizens KC</title>
+<script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+<script type="text/javascript">
 
-        document.addEventListener("deviceready", onDeviceReady, false);
-        alert('2. Event Listener');
+document.addEventListener("deviceready", onDeviceReady, false);
 
-        function onDeviceReady(){
-            alert('3. On device ready');
-            checkConnection();
-            
-        }
+function onDeviceReady(){
+    checkConnection();    
+}
 
-        // function startApp(reachability){
-        //     alert('4. Start App');
-        //     var networkState = reachability.code || reachability;
+function checkConnection() {
+    var networkState = navigator.connection.type;
 
-        //     var states = {};
-        //         states[NetworkStatus.NOT_REACHABLE]                      = 'No network connection';
-        //         states[NetworkStatus.REACHABLE_VIA_CARRIER_DATA_NETWORK] = 'Carrier data connection';
-        //         states[NetworkStatus.REACHABLE_VIA_WIFI_NETWORK]         = 'WiFi connection';
-            
-        //     alert('Connection type: ' + states[networkState]);
-            
-        //    
-        // }
+    if( networkState === 'NONE'){
+        //reveal design here
+    }
+    else {
+        window.location.href="http://clients.nharmony.com/";
+    }
+}
 
-        function checkConnection() {
-            alert('4. Check Connection Called');
-            var networkState = navigator.connection.type;
-
-            alert('Connection type: ' + networkState);
-
-            if( networkState === 'NONE'){
-                window.location.href="http://clients.nharmony.com/";
-            }
-            else {
-                
-            }
-
-        }
-
-        alert('Last: Done');
-
-        </script>
-    </head>
-
-    <body></body>
-
+</script>
+</head>
+<body>
+    <div id="no-network">
+        <h2>No Network. Please try again</h2>
+    </div>
+</body>
 </html>
