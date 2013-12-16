@@ -2,16 +2,16 @@
 <html>
     <head>
         <title>Citizens KC</title>
-        <script type="text/javascript" charset="utf-8" src="/js/util/cordova.js"></script>
+        <script type="text/javascript" charset="utf-8" src="./js/cordova.js"></script>
         <script type="text/javascript">
-        alert('initalize');
+        alert('1. initalize');
 
         document.addEventListener("deviceready", onDeviceReady, false);
 
-        alert('even listener');
+        alert('2. Event Listener');
 
         function onDeviceReady(){
-            alert('one device ready');
+            alert('2. On device ready');
             navigator.network.isReachable("clients.nharmony.com", startApp, {});
         }
 
@@ -31,7 +31,7 @@
         // if(states[networkState] === 'NOT_REACHABLE'){
         // }
         // else {
-        alert('all done');
+        alert('Last: Done');
 
 
         // }
