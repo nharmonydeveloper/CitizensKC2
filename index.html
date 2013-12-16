@@ -4,6 +4,7 @@
         <title>Citizens KC</title>
         <script type="text/javascript" charset="utf-8" src="./js/cordova.js"></script>
         <script type="text/javascript">
+        
         alert('1. Initialize');
 
         document.addEventListener("deviceready", onDeviceReady, false);
@@ -12,13 +13,7 @@
 
         function onDeviceReady(){
             alert('3. On device ready');
-            navigator.network.isReachable(
-                "clients.nharmony.com", 
-                function(reachability){
-                    alert('4. Network Callback called');
-                }, 
-                {}
-            );
+            navigator.network.isReachable("clients.nharmony.com", function(reachability){ alert('4. Network Callback called'); }, {} );
         }
 
         // function startApp(reachability){
@@ -36,7 +31,7 @@
         // }
 
         alert('Last: Done');
-        
+
         </script>
     </head>
 
