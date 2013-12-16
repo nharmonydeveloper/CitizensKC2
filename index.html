@@ -15,7 +15,7 @@
             navigator.network.isReachable("clients.nharmony.com", startApp, {});
         }
 
-        function startApp(){
+        function startApp(reachability){
             alert('start app');
             var networkState = reachability.code || reachability;
 
