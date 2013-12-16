@@ -2,7 +2,7 @@
 <html>
     <head>
         <title>Citizens KC</title>
-        <script type="text/javascript" charset="utf-8" src="./js/cordova.js"></script>
+        <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript">
         alert('1. Initialize');
 
@@ -30,6 +30,7 @@
         // }
 
         function checkConnection() {
+            alert('4. Check Connection Called');
             var networkState = navigator.connection.type;
 
             var states = {};
