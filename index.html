@@ -4,37 +4,39 @@
         <title>Citizens KC</title>
         <script type="text/javascript" charset="utf-8" src="./js/cordova.js"></script>
         <script type="text/javascript">
-        alert('1. initalize');
+        alert('1. Initialize');
 
         document.addEventListener("deviceready", onDeviceReady, false);
 
         alert('2. Event Listener');
 
         function onDeviceReady(){
-            alert('2. On device ready');
-            navigator.network.isReachable("clients.nharmony.com", startApp, {});
+            alert('3. On device ready');
+            navigator.network.isReachable(
+                "clients.nharmony.com", 
+                function(reachability){
+                    alert('4. Network Callback called');
+                }, 
+                {}
+            );
         }
 
-        function startApp(reachability){
-            alert('start app');
-            var networkState = reachability.code || reachability;
+        // function startApp(reachability){
+        //     alert('4. Start App');
+        //     var networkState = reachability.code || reachability;
 
-            var states = {};
-                states[NetworkStatus.NOT_REACHABLE]                      = 'No network connection';
-                states[NetworkStatus.REACHABLE_VIA_CARRIER_DATA_NETWORK] = 'Carrier data connection';
-                states[NetworkStatus.REACHABLE_VIA_WIFI_NETWORK]         = 'WiFi connection';
+        //     var states = {};
+        //         states[NetworkStatus.NOT_REACHABLE]                      = 'No network connection';
+        //         states[NetworkStatus.REACHABLE_VIA_CARRIER_DATA_NETWORK] = 'Carrier data connection';
+        //         states[NetworkStatus.REACHABLE_VIA_WIFI_NETWORK]         = 'WiFi connection';
             
-            alert('Connection type: ' + states[networkState]);
+        //     alert('Connection type: ' + states[networkState]);
             
-            window.location.href="http://clients.nharmony.com/";
-        }
-        // if(states[networkState] === 'NOT_REACHABLE'){
+        //     window.location.href="http://clients.nharmony.com/";
         // }
-        // else {
+
         alert('Last: Done');
-
-
-        // }
+        
         </script>
     </head>
 
