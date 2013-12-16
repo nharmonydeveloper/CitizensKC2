@@ -5,30 +5,30 @@
 
 <script type="text/javascript" charset="utf-8" src="/js/util/cordova.js"></script>
 <script type="text/javascript">
-	
-        document.addEventListener("deviceready", onDeviceReady, false);
 
-        function onDeviceReady(){
-        	navigator.network.isReachable("clients.nharmony.com",startApp, {})
-        }
+document.addEventListener("deviceready", onDeviceReady, false);
 
-        // function startApp(){
+function onDeviceReady(){
+navigator.network.isReachable("clients.nharmony.com",startApp, {})
+}
 
-        // var networkState = reachability.code || reachability;
+function startApp(){
+    var networkState = reachability.code || reachability;
 
-        // var states = {};
-        // states[NetworkStatus.NOT_REACHABLE]                      = 'No network connection';
-        // states[NetworkStatus.REACHABLE_VIA_CARRIER_DATA_NETWORK] = 'Carrier data connection';
-        // states[NetworkStatus.REACHABLE_VIA_WIFI_NETWORK]         = 'WiFi connection';
+    var states = {};
+    states[NetworkStatus.NOT_REACHABLE]                      = 'No network connection';
+    states[NetworkStatus.REACHABLE_VIA_CARRIER_DATA_NETWORK] = 'Carrier data connection';
+    states[NetworkStatus.REACHABLE_VIA_WIFI_NETWORK]         = 'WiFi connection';
+    
+    alert('Connection type: ' + states[networkState]);
+}
+// if(states[networkState] === 'NOT_REACHABLE'){
+// }
+// else {
+window.location.href="http://clients.nharmony.com/";
 
-        // if(states[networkState] === 'NOT_REACHABLE'){
-        // 	alert('Connection type: ' + states[networkState]);
-        // }
-        // else {
-               window.location.href="http://clients.nharmony.com/";
-
-        // }
-	
+// }
+        
 </script>
 </head>
 <body></body>
