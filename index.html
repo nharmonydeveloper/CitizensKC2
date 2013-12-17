@@ -35,11 +35,14 @@ $(document).ready(function() {
         * Documentation @ http://docs.phonegap.com/en/3.0.0/cordova_connection_connection.md.html */
         var networkState = navigator.connection.type;
 
+        alert(networkState);
+
         if( networkState === 'NONE'){
             $('div#no-network').css('display','block');
         }
 
         else {
+
             window.location.href=site; 
 
             //Check to make sure the site is reachable
@@ -96,7 +99,7 @@ function gotosite(){
 
         <!-- content -->
         <div class="content show-content" data-role="content">
-            <div class="inner-content" style="text-align:center; height: 500px">
+            <div class="inner-content" style="text-align:center; height: 375px">
                 
                 <div id="spinner">
                     <img style="text-align:center; margin: 0 auto;" src="./css/spinner.gif"></img>
