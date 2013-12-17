@@ -29,6 +29,13 @@ $(document).ready(function() {
         checkConnection();    
     }
 
+    function gotosite(){
+        alert('gotositecalled');
+        checkConnection();
+        alert('gotositeended');
+    }
+
+
     //Checks the connection and displays appropriate messages
     function checkConnection() {    
        /* Cordova's network manager. Needs permissions in config.xml. 
@@ -65,11 +72,7 @@ $(document).ready(function() {
     }
 });
 
-function gotosite(){
-    alert('gotositecalled');
-    checkConnection();
-    alert('gotositeended');
-}
+
 
 </script>
 <style>
