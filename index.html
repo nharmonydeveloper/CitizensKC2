@@ -43,9 +43,30 @@ $(document).ready(function() {
 
         else {
             window.location.href=site; 
+
+            //Check to make sure the site is reachable
+            // $.ajax({ 
+            //     url: site, 
+            //     complete: function(xhr, statusText) { 
+            //         alert(xhr.status); 
+            //     } 
+            // }); 
+
+            // if (error is <400){
+            // $('div#spinner').css('display','none');
+            // $('div#site-not-reachable').css('display','block');
+            // }
+            // else{
+            //
+
         }
     }
 });
+
+function gotosite(){
+    window.location.href=site;
+}
+
 </script>
 <style>
     #no-network, #site-not-reachable{
@@ -85,13 +106,13 @@ $(document).ready(function() {
                 <!-- No network error message -->
                 <div id="no-network">
                     <h2>No Network. Please try again</h2>
-                    <button>Retry</button>
+                    <button onclick="gotosite();">Retry</button>
                 </div>
 
                 <!-- Network connects, but the site is unreachable -->
                 <div id="site-not-reachable">
                     <h2>The site is not reachable. Please try again</h2>
-                    <button>Retry</button>
+                    <button onclick="gotosite();">Retry</button>
                 </div>
 
             </div>
