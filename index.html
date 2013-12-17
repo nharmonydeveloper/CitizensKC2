@@ -30,25 +30,36 @@ $(document).ready(function() {
         if( networkState === 'NONE'){
             $('div#no-network').css('display','block');
         }
-        else {  
-            //Check to make sure the site is reachable
-            $.ajax({ 
-                url: site, 
-                complete: function(xhr, statusText) { 
-                    alert(xhr.status); 
-                } 
-            }); 
 
-            // if (error is <400){
-            // $('div#site-not-reachable').css('display','block');
-            // }
-            // else{
-            //     window.location.href=site;
-            // }
+        else {
+            window.location.href=site; 
+        }
+
+
+        // else {  
+        //     //Check to make sure the site is reachable
+        //     $.ajax({ 
+        //         url: site, 
+        //         complete: function(xhr, statusText) { 
+        //             alert(xhr.status); 
+        //         } 
+        //     }); 
+
+        // if (error is <400){
+        // $('div#site-not-reachable').css('display','block');
+        // }
+        // else{
+        
+        // }
         }
     }
 }
 </script>
+<style>
+    body{
+        background-color: rgb(116, 155, 152);
+    }
+</style>
 </head>
 <body>
     <!-- Spinner animation -->
