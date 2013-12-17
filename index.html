@@ -69,6 +69,11 @@ $(document).ready(function() {
     #no-network, #site-not-reachable{
         display: none;
     }
+    #spinner{
+        position: relative;
+        top: 50%;
+        margin-top: -40px;
+    }
 </style>
 </head>
 <body data-resourceid="2" style="-webkit-user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
@@ -90,7 +95,7 @@ $(document).ready(function() {
 
         <!-- content -->
         <div class="content show-content" data-role="content">
-            <div class="inner-content" style="text-align:center;">
+            <div class="inner-content" style="text-align:center; height: 500px">
                 
                 <div id="spinner">
                     <img style="text-align:center; margin: 0 auto;" src="./css/spinner.gif"></img>
