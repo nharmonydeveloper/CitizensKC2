@@ -38,6 +38,7 @@ $(document).ready(function() {
         //alert(networkState);
 
         if( networkState === 'none'){
+            $('div#spinner').css('display','none');
             $('div#no-network').css('display','block');
         }
 
@@ -65,7 +66,7 @@ $(document).ready(function() {
 });
 
 function gotosite(){
-    window.location.href=site;
+    checkConnection();
 }
 
 </script>
@@ -106,7 +107,7 @@ function gotosite(){
                 </div>
                 <!-- No network error message -->
                 <div id="no-network">
-                    <h2>No Network. Please try again</h2>
+                    <h2>No network connection detected. Please try again</h2>
                     <button onclick="gotosite();">Retry</button>
                 </div>
 
