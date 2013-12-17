@@ -35,9 +35,9 @@ $(document).ready(function() {
         * Documentation @ http://docs.phonegap.com/en/3.0.0/cordova_connection_connection.md.html */
         var networkState = navigator.connection.type;
 
-        alert(networkState);
+        //alert(networkState);
 
-        if( networkState === 'NONE'){
+        if( networkState === 'none'){
             $('div#no-network').css('display','block');
         }
 
