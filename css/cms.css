@@ -1,0 +1,1195 @@
+/*@import url("navigationBar.css");
+@import url("content.css");
+@import url("structure.css");
+@import url("errorMessages.css");*/
+/*-------------------------
+	CMS Head Nav Styles
+-------------------------*/
+/*The header bar itself*/
+div.cmsHeadNav {
+	position: fixed;
+	z-index:1000;
+
+	width: 100%; 
+	height: 25px; 
+	padding:0px; 
+	margin: 0px;
+	
+	border-bottom: 1px solid black;
+	background-color: #F0F0F0;	
+	background: #3A3A3A;
+	background-image: -moz-linear-gradient(top, #404040, #303030);
+	background-image: -ms-linear-gradient(top, #404040, #303030);
+	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#404040), to(#303030));
+	background-image: -o-linear-gradient(top, #404040, #303030);
+	background-image: linear-gradient(top, #404040, #303030);
+	background-repeat: repeat-x;
+	/*filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#404040', endColorstr='#303030', GradientType=0);*/
+
+	/*Shadow*/
+	-webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 1);
+	-moz-box-shadow:0 0px 10px rgba(0, 0, 0, 1);
+	box-shadow:0 0px 10px rgba(0, 0, 0, 1);	
+
+}
+
+div.cmsHeadNav a, div.cmsHeadNav p{
+	font-family: Helvetica, Arial, Geneva, sans-serif !important;
+}
+
+div.cmsHeadNavSpacer{
+	height: 25px;
+}
+
+/*Generic class to cover link 'buttons,' i.e. block displayed links*/
+div.cmsHeadNav .cmsHeadNavButton {
+	/*Layout*/
+	display: block;
+	vertical-align: middle;
+	float: left;
+	height: 24px;
+	padding: 0;
+	margin: 0;
+	padding-left: 10px;
+	padding-right: 10px;	
+	
+	/*type*/
+	font-family: Helvetica, sans-serif;
+	font-size: 10pt;
+	text-decoration: none;
+	text-align: left;
+	line-height: 22px !important;	
+	list-style: none;
+	color:#aaa;	
+	
+	/*colors*/
+	background: #3A3A3A;
+	background-image: -moz-linear-gradient(top, #404040, #303030);
+	background-image: -ms-linear-gradient(top, #404040, #303030);
+	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#404040), to(#303030));
+	background-image: -o-linear-gradient(top, #404040, #303030);
+	background-image: linear-gradient(top, #404040, #303030);
+	background-repeat: repeat-x;
+
+	border: 1px solid black;
+	border-left: 1px solid #4A4A4A;
+	border-right: 1px solid #292929;	
+}
+
+/*Since these are navigation links, let's not act like in-article links*/
+div.cmsHeadNav .cmsHeadNavButton:link, 
+div.cmsHeadNav .cmsHeadNavButton:visited, 
+div.cmsHeadNav .cmsHeadNavButton:active {
+	color: #AAA !important;
+}
+div.cmsHeadNav .cmsHeadNavButton:hover {  
+    color: #FFF !important;
+    background: #666666;
+    
+}
+
+.icon{
+	background-image: url("/modules/cms/modcore/img/glyphicons-halflings-white.png");	
+	display: inline-block;
+	width: 14px;
+	height: 14px;
+	margin-top: 1px;
+	margin-right: 4px;	
+	*margin-right: .3em;
+
+	line-height: 14px;
+	vertical-align: text-top;
+	background-position: 14px 14px;
+	background-repeat: no-repeat;	
+}
+
+.homeIcon {
+  	background-position: 0 -24px;
+	margin-top: 1px;  	
+ 	padding-right: 4px;
+	padding-left: 0px;
+	margin-left: 0px !important; 
+}
+
+.gearIcon {
+	background-position: -432px 0;
+ 	padding-right: 4px;
+	padding-left: 0px;
+	margin-left: 0px !important; 
+}
+
+.pageIcon {
+  background-position: -24px -24px;
+  padding-right: 2px;
+}
+
+.plusIcon {
+  background-position: -408px -96px;
+}
+
+.editIcon{
+  background-position: -96px -72px;
+}
+
+.modulesIcon {
+  background-position: -264px 0;
+}
+
+.permissionsIcon{
+	background-position: -96px -120px;
+}
+
+.structureIcon{
+	background-position: -216px 0;
+}
+
+.contentIcon {
+  background-position: 0 -72px;
+}
+
+.removeIcon {
+  background-position: -312px 0;
+}
+
+.systemIcon {
+  background-position: 0 -144px;
+  padding-right: 4px;
+}
+
+.wrenchIcon {
+	background-position: -360px -144px;
+}
+
+.folderIcon {
+  width: 16px;
+  background-position: -408px -120px;
+}
+
+.helpIcon {
+  background-position: -96px -96px;
+}
+
+.userIcon{	
+	background-position: -168px 0;
+	padding-right: 4px;
+	padding-left: 0px;
+	margin-left: 0px !important;
+}
+
+.logoutIcon{
+	background-position: -384px 0;
+	margin-right: 0px !important;
+}
+
+
+
+
+
+
+
+
+/*Generic container that provides separators*/
+div.cmsHeadNavSection{
+	float: left;
+}
+
+/*Logo, home, anything sticky left*/
+div.cmsHeadNavLeft{
+	float: left;
+	border-right: 1px solid rgb(74, 74, 74);
+}
+
+/*Right aligned sections, my menu, alerts, context sensitive menus*/
+div.cmsHeadNavRight {
+	height: 25px;
+	float: right;
+	border-left: 1px solid rgb(0,0,0);	
+}
+ 
+div.cmsHeadNavSpacer {
+	height: 25px;
+}
+
+
+/*Context Menu Sections*/
+.cmsHeadNavRollover{
+	cursor: default;
+}
+
+div.cmsHeadNavDropdown{	
+	display: none;	
+	overflow: visible;
+	position: relative;   
+
+	z-index: 1000 !important;
+	padding: 0px;
+	padding-top: 10px;
+
+	border: 1px solid rgb(190, 190, 190);
+	background: rgb(255, 255, 255);
+	border-top: white;
+
+	box-shadow: 0 2px 2px rgba(0, 0, 0, .4);
+	-webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, .4);	
+	-moz-box-shadow: 0 2px 4px rgba(0, 0, 0, .4);	
+}
+
+div.cmsHeadNavDropdown p{
+	color: rgb(25,25,25) !important;
+	margin: 0px;
+	padding: 0px;
+	font-size: 13px !important;
+	z-index: 1000;
+
+}
+
+p.cmsHeadNavDropDownSeparator{
+	border-bottom: 1px solid rgb(185, 185, 185);
+	padding-bottom: 6px !important;
+	position: relative;
+	margin-right: -21px !important;
+	margin-left: -10px !important;
+	margin-bottom: 4px !important;
+}
+
+div.cmsHeadNavUserMenu{
+	position: absolute;
+	top: 25px;
+		
+
+	width: 250px;
+	height: 150px;
+
+	right:36px;
+
+	text-align: left;	
+}
+div.cmsHeadNavSectionEdit{
+	display: none;
+}
+
+div.cmsHeadNavNewMenu{
+	position: absolute;
+	top: 25px;
+	margin-left:-98px;
+	min-width: 150px;
+
+	text-align: left;	
+
+
+}
+
+
+div.cmsHeadNavEditMenu{
+	position: absolute;
+	top: 25px;
+	margin-left:-28px;
+	min-width: 150px;
+
+	text-align: left;	
+}
+
+div.cmsHeadNavEditMenu div.cmsHeadNavDropdownSection{
+	margin-left: 10px;
+	margin-bottom: 5px;
+}
+
+div.cmsHeadNavEditMenu div.cmsHeadNavDropdownSection span.icon{
+	margin-right: 8px;
+}
+
+div.cmsHeadNavSystemMenu{
+	position: absolute;
+	top: 25px;
+	margin-left:-74px;
+	min-width: 150px;
+
+
+	text-align: left;	
+}
+
+div.cmsHeadNavSystemMenu div.cmsHeadNavDropdownSection{
+	margin-left: 10px;
+	margin-bottom: 10px;
+}
+
+div.cmsHeadNavSystemMenu div.cmsHeadNavDropdownSection span.icon{
+	margin-right: 8px;
+}
+
+
+div.cmsHeadNavRollover:hover div.cmsHeadNavDropdown {
+	display: block !important;
+
+}
+
+div.cmsHeadNavSectionDropdown div.cmsHeadNavRollover:hover {
+	background-color: rgb(255,255,255) !important;
+	border: 1px solid rgb(190, 190, 190) !important;
+	border-bottom: 1px solid transparent !important;
+	color: rgb(60,60,60) !important;
+	z-index: 1000 !important;
+
+}
+
+div.cmsHeadNavDropdownSection span.icon{
+ 	background-image: url("/modules/cms/modcore/img/glyphicons-halflings.png") !important; 	
+}
+
+div.cmsHeadNavRollover:hover span.icon{
+ 	background-image: url("/modules/cms/modcore/img/glyphicons-halflings.png") !important; 	
+}
+
+
+div.cmsHeadNavDropdownSection{
+	margin: 20px;
+	margin-top: 0px;
+}
+
+div.cmsHeadNavUserMenu p.cmsHeadNavUsersName{
+	font-weight: bold;
+	margin-bottom: 4px;
+}
+
+div.cmsHeadNavUserMenu p{
+	
+}
+
+div.cmsHeadNavUserProfile{
+	border: 1px solid silver;
+	height: 60px;
+	width: 60px;
+	float: left;
+	margin-right: 10px;
+}
+
+div.cmsHeadNavUserMenu img.userProfilePicture{
+	width: 60px;
+	height: 60px;
+
+}
+
+div.cmsHeadNavDropdownSection a:visited,div.cmsHeadNavDropdownSection a:active, div.cmsHeadNavDropdownSection a {
+	color: rgb(51, 140, 223);
+	text-decoration: none;
+}
+
+
+div.cmsHeadNavUserMenu div.cmsHeadNavUserAction{
+	position: absolute;
+	bottom: 0;
+
+	width: 100%;
+	height: 50px;
+	
+	border-top: 1px solid silver;
+	background-color: rgb(240,240,240) !important;
+}
+
+div.cmsHeadNavUserMenu div.cmsHeadNavUserAction a.cmsHeadNavActionButton{
+	float: right;
+	margin-right: 10px;
+}
+/*Structure mode link switcher*/
+a.structureLink {
+	cursor: pointer;
+}
+
+
+
+/*buttons*/
+a.cmsHeadNavActionButton {
+	background: #EAEAEA;
+	background: -moz-linear-gradient(top, #EFEFEF, #D8D8D8) #D8D8D8;
+	background: -webkit-gradient(linear, left top, left bottom, from(#EFEFEF), to(#D8D8D8)) #D8D8D8;
+	background: linear-gradient(top, #EFEFEF, #D8D8D8) #D8D8D8;
+	border: 1px solid #ABABAB;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	-moz-box-shadow: 0 1px 2px rgba(0, 0, 0, .1), 0 1px 1px rgba(255, 255, 255, .8) inset;
+	-webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, .1), 0 1px 1px rgba(255, 255, 255, .8) inset;
+	box-shadow: 0 1px 2px rgba(0, 0, 0, .1), 0 1px 1px rgba(255, 255, 255, .8) inset;
+	color: #707070;
+	color: #303030 !important;
+	text-decoration: none;
+	font-family: Helvetica, Arial, Geneva, sans-serif !important;
+	font-size: 12px;
+	-webkit-font-smoothing: antialiased;
+	font-weight: bold;
+	margin: 0;
+	outline: none;
+	padding: 5px 10px;
+	text-align: center;
+	text-shadow: 0 1px 1px rgba(255, 255, 255, .5);
+	margin-top: 6px;
+	margin-bottom: 6px;
+	text-decoration: none !important;
+	-webkit-transition: border linear 0.2s, box-shadow linear 0.2s;
+	-moz-transition: border linear 0.2s, box-shadow linear 0.2s;
+	-o-transition: border linear 0.2s, box-shadow linear 0.2s;
+	transition: border linear 0.2s, box-shadow linear 0.2s;	
+
+}	
+
+a.cmsHeadNavActionButton:hover {
+    background: #f1f1f1;
+    background: -moz-linear-gradient(top, #f6f6f6, #e3e3e3) #e3e3e3;
+    background: -webkit-gradient(linear, left top, left bottom, from(#f6f6f6), to(#e3e3e3)) #e3e3e3;
+    background: linear-gradient(top, #f6f6f6, #e3e3e3) #e3e3e3;
+    cursor: pointer;
+	-webkit-box-shadow: 0 0 8px rgba(0, 0, 0, 0.25), 0 1px 0 rgba(255,255,255,0.8) inset;
+	box-shadow: 0 0 8px rgba(0, 0, 0, 0.25), 0 1px 0 rgba(255,255,255,0.8) inset;
+	
+  }
+
+a.cmsHeadNavActionButton:focus {
+    background: -moz-linear-gradient(top, #f6f6f6, #e3e3e3) #e3e3e3;
+    background: -webkit-gradient(linear, left top, left bottom, from(#f6f6f6), to(#e3e3e3)) #e3e3e3;
+    background: linear-gradient(top, #f6f6f6, #e3e3e3) #e3e3e3;
+    border: 1px solid #80bfff;
+    -moz-box-shadow: 0 0 3px #80bfff, 0 1px 1px rgba(255, 255, 255, .8) inset;
+    -webkit-box-shadow: 0 0 3px #80bfff, 0 1px 1px rgba(255, 255, 255, .8) inset;
+    box-shadow: 0 0 3px #80bfff, 0 1px 1px rgba(255, 255, 255, .8) inset;
+}
+  
+a.cmsHeadNavActionButton:active {  
+	color: #1c4257; border: 1px solid #7096ab;
+	background: -moz-linear-gradient(top, #b9e0f5 0%, #92bdd6 100%); 
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#b9e0f5), color-stop(100%,#92bdd6)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #b9e0f5 0%,#92bdd6 100%); 
+	background: -o-linear-gradient(top, #b9e0f5 0%,#92bdd6 100%); 
+	background: -ms-linear-gradient(top, #b9e0f5 0%,#92bdd6 100%); 
+	background: linear-gradient(top, #b9e0f5 0%,#92bdd6 100%); 
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+}  
+ 
+a.cmsHeadNavActionButton:disabled {
+    background: #efefef !important;
+    border: 1px solid #d1d1d1 !important;
+    -moz-box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    color: #aaa !important;
+    cursor: default;
+    text-shadow: 0 1px 1px #fff !important;
+}
+
+
+
+/*-------------------------
+	Node Content 
+-------------------------*/
+
+div.node_container,
+div.node_content_manage {
+	border: 1px dashed transparent;
+	position: relative;	
+}
+div.node_content_manage:hover {
+	border: 1px dashed red;	
+	/*background-color: rgba(0,90,215, .1);	*/
+}
+
+div.node_content_manage:hover .node_content_menu{
+  display: block;
+}
+
+div.node_content_menu {
+  font-family: Arial, Helvetica, sans-serif !important;
+  font-size: 12pt;
+  color: black;    	
+  display: none;
+  position: absolute;
+  top: 3px;
+  right: 3px; 
+  z-index: 500;
+  text-align: right;	
+}
+div.node_content_menu img.content_menu_gear {
+
+	background-color: #fff;
+	border: 1px solid transparent;
+	padding: 3px;
+	padding-bottom: 3px;
+	margin-bottom: 0px;
+	z-index: 500;	
+	border: 1px solid #ccc;	
+	-moz-border-radius: 4px 4px 4px 4px; /* LTR */
+	border-radius: 4px 4px 4px 4px; /* LTR */		
+}
+div.node_content_menu:hover img.content_menu_gear {	
+	border: 1px solid #ccc;
+	border-bottom: none;	
+	-moz-border-radius: 4px 4px 0px 0px; /* LTR */
+	border-radius: 4px 4px 0px 0px; /* LTR */	
+}
+
+/*div.node_content_menu_hide{
+  display: none !important;
+}*/
+
+div.region_container_structure div.node_content_menu{
+	display: none !important;
+}
+
+
+div.content_menu_items {
+	display: none; /*none*/
+	z-index: 500;
+	margin-top: -3px;
+}
+
+.node_content_menu:hover div.content_menu_items{
+  display: block;
+}
+
+@-moz-document url-prefix() {
+div.structure_menu_items {
+	margin-top: -4px !important;
+}
+}
+
+div.node_content_menu ul {  
+  background-color: #fff !important;
+  border: 1px solid #ccc !important;
+  display: block !important;
+  margin: 0 !important;
+  padding: 0.25em 0 !important;
+  width: 100px !important;
+  text-align: left !important;
+  white-space: nowrap !important;
+ 
+  -moz-border-radius: 4px 0px 4px 4px !important; /* LTR */
+  border-radius: 4px 0px 4px 4px !important; /* LTR */
+  -webkit-box-shadow: 3px 3px 2px rgba(0, 0, 0, .10) !important;
+}
+div.node_content_menu li {
+  line-height: 100% !important;
+  list-style: none !important;
+  list-style-image: !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+div.node_content_menu li a {
+  color: #333 !important;
+  display: block;
+  /*
+  margin: 0.25em 0;
+  padding: 0.25em 1em 0.25em 0.5em;
+  */
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 3px;
+  padding-bottom: 4px;
+  font-size: 12px;
+  text-decoration: none;
+ 
+}
+
+div.node_content_menu li a:hover {
+  background-color: #bfdcee;
+}
+
+.emptyNode{
+	height: 29px;
+	border: 1px dashed #666 !important;	
+	border-radius: 4px;
+	/*background-color: rgba(150,150,150, .5);	*/
+}
+
+.emptyNode:hover{
+	border: 1px dashed red !important;
+}
+
+.emptyNodeRemoveBorder{
+	border: 1px dashed transparent !important;	
+}
+
+.emptyNodeRemoveBorder:hover {
+	border: 1px dashed transparent !important;	
+}
+
+
+/***************************************************************Global***************************************************************/
+/*Animations*/
+.structureAnimate * {
+	transition: box-shadow .5s ease, margin .6s ease, padding .6s ease, opacity 1s ease, background-color .5s ease;
+	-moz-transition: box-shadow 1s ease, margin .6s ease, padding .6s ease, opacity 1s ease, background-color .5s ease;	
+	-webkit-transition:-webkit-box-shadow 1s ease, margin .6s ease, padding .6s ease, opacity 1s ease, background-color .5s ease;
+
+}
+/*Make sure to not apply structure animations to the nav bar*/
+div.cmsHeadNav *{
+	transition: none !important;
+	-webkit-transition: none !important;
+}
+/*Same with tables in the CMS backend*/
+div.cmsPages *{
+	transition: none !important;
+	-webkit-transition: none !important;
+}
+
+/**************************************************Global*****************************************************/
+div.structure_mode_background{
+	background: black;
+	z-index: -1;
+	position:fixed;
+	height: 100%;
+	width: 100%;
+	opacity: 0;
+	transition: opacity .5s ease; 
+	-moz-transition: opacity .5s ease;	
+	-webkit-transition: opacity .5s ease;
+}
+
+
+
+
+/************************************************Region Styles************************************************/
+/*Abstract region, rounded corners, spacing, etc*/
+div.region_container_structure{
+	position: relative;
+	border-radius: 5px;
+	min-height: 20px;
+	min-height: 50px;
+	margin: 10px;
+	padding: 10px;	
+	padding-top: 35px;	
+	z-index: 0;		
+}
+div.region_structure_titleBar{
+	position: absolute;
+	top:0px;
+	left:0px;
+	font-family: Helvetica, Arial, Geneva, sans-serif !important;
+	font-size: 100% !important;
+	width: 100%;
+	text-align: left;
+	z-index: 651;
+}
+div.region_structure_titleBar div.region_structure_titleBarInner{
+	padding: 7px !important;
+	color: rgb(102,217,239) !important;
+	font-size: 12pt !important;
+	font-family: Helvetica, Arial, Geneva, sans-serif !important;	
+}
+div.region_structure_titleBar div.region_structure_titleBarInner p{
+	font-size: 12pt !important;
+	font-family: Helvetica, Arial, Geneva, sans-serif !important;	
+	color: rgb(102,217,239) !important;
+}
+
+/*The blue structure mode style for a managable region container*/
+div.region_structure_manage.region_container_structure{
+	border:solid 2px rgb(102,217,239);
+}
+div.region_structure_manage.region_container_structure div.region_structure_titleBarInner{
+	border-bottom: 2px solid rgba(102,217,239,.5);	
+}
+
+/*Green droppable glow for regions that can accept the item*/
+div.region_droppable_accept {
+	background-color: rgba(0,255,0,.2) !important;
+	border:solid 2px rgb(102,239,150) !important;
+	-webkit-box-shadow: 0px 0px 15px 3px rgba(102,239,150, .50), 0px 0px 15px 3px rgba(102,239,150, .50) !important;
+	box-shadow: 0px 0px 15px 3px rgba(102,239,150, .50), inset 0px 0px 15px 3px rgba(102,239,150, .50) !important;
+}
+div.region_droppable_accept div.region_structure_titleBarInner p{
+	color: rgb(102,239,150) !important;
+}
+div.region_droppable_accept div.region_structure_titleBarInner{
+	border-bottom: 2px solid rgb(102,239,150) !important;
+	color: rgb(102,239,150) !important;
+}
+
+/*Red droppable glow for regions cant CAN'T accept the item*/
+div.region_droppable_deny {
+	background-color: rgba(265,0,0,.1) !important;
+	border:solid 2px rgb(262,70,21) !important;
+}
+
+div.region_droppable_deny:hover {
+	cursor: not-allowed;
+}
+div.region_droppable_deny div.region_structure_titleBarInner p{
+	color: rgb(262,70,21) !important;
+	font-size: 12pt !important;
+	font-family: Helvetica, Arial, Geneva, sans-serif !important;
+}
+div.region_droppable_deny div.region_structure_titleBarInner{
+	border-bottom: 2px solid rgb(262,70,21) !important;
+	color: rgb(262,70,21) !important;
+	margin: 0px !important;
+	padding: 7px !important;
+}
+
+
+/*************************************************Node Styles*************************************************/
+/*Any node that has structure manage permissions on its parent region*/
+div.region_container_structure div.node_structure_manage{
+	margin: 10px;		
+	min-height: 26px;
+	padding-top: 26px;
+}
+div.region_container_structure div.node_structure_manage:hover{
+	opacity: 1;
+}
+/*A 100% div that acts as a screen to prevent any interaction with the node's content,
+as well as functioning as a frame for the title bar and menus*/
+div.node_draggable_overlay {
+	position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 400;
+	cursor: move;
+	background-image: -webkit-linear-gradient(top, rgba(0,0,0,.5) 0%, rgba(0,0,0,.1) 100%);
+	background-color: rgba(0,0,0,.2) !important;
+	border: 1px solid rgb(102,217,239);
+}
+div.node_draggable_overlay:hover{
+	background-color: rgba(102,217,239,.5) !important;
+	background-color: rgba(0,205,255,.9) !important;
+	box-shadow: inset 0 0 160px rgba(0, 204, 255, 0.9);
+	-webkit-box-shadow: inset 0 0 160px rgba(0, 204, 255, 0.9);	
+	z-index: 652;	
+}
+/*Overlay used to block interaction with modules in a region that is unmanagable*/
+div.node_undraggable_overlay {
+	position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 650;
+	cursor: not-allowed;
+	background-image: -webkit-linear-gradient(top, rgba(100,0,0,.3) 0%, rgba(100,0,0,.3) 100%);
+	background-color: rgba(0,0,0,.2) !important;
+	
+}
+
+/*Node titlebar. Contains node name as well as structure edit menu*/
+div.node_draggable_titleBar{
+	background-color: rgba(102,217,239,.0);
+	height: 26px;
+	position: absolute;
+	top:0px;
+	left:0px;
+	left: 0px;
+	font-family: Helvetica, arial;
+	color: rgb(102,217,239);
+	width: 100%;
+	text-align: left;
+}
+div.node_draggable_titleBar p{
+	font-family: Helvetica, arial !important;
+	color: rgb(102,217,239);
+	font-size: 12pt !important;
+}
+
+div.node_draggable_titleBarInner{
+	background-color: rgba(102,217,239,.3);
+	position: relative;
+	padding: 5px;
+}
+div.node_draggable_titleBarInner p{
+	color: rgb(102,217,239);	
+}
+/*Hover state for the node's titlebar*/
+div.node_draggable_overlay:hover div.node_draggable_titleBar{
+	background-color: rgba(102,217,239,.5);
+	margin: left;
+	opacity: 1;
+}
+div.node_draggable_overlay:hover div.node_draggable_titleBar div.node_draggable_titleBarInner p {
+	color: rgba(255,255,255,.5) !important;
+}
+
+div.region_droppable_deny div.node_container{
+	opacity: .7;
+}
+
+
+
+
+/**********************************************DRAGGABLE CLASSES**********************************************/
+/*The placeholder that appears to give the user an idea of where the node they are dragging will go*/
+div.node_draggable_placeholder { 
+	min-height: 53px;	
+	margin: 10px;
+	background-color: rgba(102,239,150,.3);
+	border: 2px dashed rgb(102,217,239) !important;
+	border: 2px dashed rgb(102,239,150) !important;	
+}
+div.node_draggable_placeholder:hover{
+	background-color: rgb(102,217,239) !important;
+}
+.hover div.node_draggable_placeholder {
+
+}
+
+/*The node the user is dragging, collapsed to minimum width*/
+.ui-sortable-helper{
+	display: inline-block !important;
+	min-width: 150px;
+	width: auto !important;
+	border: 1px solid transparent !important;
+}
+
+.ui-sortable-helper.emptyNode{
+	border: 1px solid transparent !important;
+}
+
+
+/**********************************************Content Mode Fixes*********************************************/
+div.region_container_structure div.node_container{
+	border: 1px solid transparent;
+}
+div.region_container_structure div.node_container:hover{
+	border: 1px solid transparent;
+}
+div.region_container_structure div.emptyNode {
+	border: 1px solid transparent !important;
+}
+
+/************************************************Context Menus************************************************/
+/*Shared menu items style*/
+div.structure_menu_items {
+	display: none;
+	z-index: 650;
+	margin-top: -3px;
+	font-family: Arial, Helvetica, sans-serif !important;
+}
+div.structure_menu_items{
+	font-family: Arial, Helvetica, sans-serif !important;
+	font-size: 12pt;
+	color: black;		
+}
+
+div.structure_menu_items li.gearDropDownSeparator{
+	border-top: 1px solid rgba(0, 0, 0,.2);
+}
+
+div.structure_menu_items ul {  
+	background-color:  rgb(102,217,239) !important;
+	border: 1px solid rgb(102, 217, 239) !important;
+	display: block !important;
+	margin: 0 !important;
+	padding: 0.25em 0 !important;
+	width: 100px !important;
+	text-align: left !important;
+	white-space: nowrap !important;
+	-moz-border-radius: 4px 0px 4px 4px !important;
+	border-radius: 4px 0px 4px 4px !important; 
+	-webkit-box-shadow: 3px 3px 2px rgba(0, 0, 0, .10) !important;
+}
+div.structure_menu_items li {
+	line-height: 100% !important;
+	list-style: none !important;
+	list-style-image: !important;
+	margin: 0 !important;
+	padding: 0 !important;
+}
+div.structure_menu_items li a {
+	color: #333 !important;
+	display: block;
+	padding-left: 8px;
+	padding-right: 8px;
+	padding-top: 3px;
+	padding-bottom: 4px;
+	font-size: 12px;
+	text-decoration: none;
+}
+div.structure_menu_items li a:hover {
+	background-color: rgba(255,255,255,.6);
+	background-color: rgba(0,0,0,.8);
+	color: rgb(102, 217, 239) !important;
+}
+
+
+/*********************Region specific styles*********************/
+div.region_structure_menu {
+	text-align: right;		
+	display: block;	
+	position: absolute;
+	top: 4px;
+	right: 4px;
+	z-index: 651;
+	display: none;
+}
+div.region_structure_titleBar div.region_structure_menu{
+	display: block;
+
+}
+div.region_structure_menu img.structure_menu_gear {	
+	border: 1px solid transparent;
+	padding: 2px;
+	z-index: 650;	
+	-moz-border-radius: 4px 4px 4px 4px; 
+	border-radius: 4px 4px 4px 4px; 	
+	transition: none !important;	
+}
+/*Display on hover*/
+div.region_structure_menu:hover img.structure_menu_gear {	
+	background-color: rgb(102, 217, 239) !important;
+	border: 1px solid rgb(102, 217, 239);
+	padding: 2px;
+	border-bottom: none;	
+	-moz-border-radius: 4px 4px 0px 0px; 
+	border-radius: 4px 4px 0px 0px; 
+}
+/*Display on hover*/
+div.region_structure_menu:hover .structure_menu_items{
+	display: block;
+}
+
+
+/**********************Node specific styles***********************/
+div.node_structure_menu{
+	display:none; 
+}
+div.node_structure_menu {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12pt;
+	color: black;    	
+	position: absolute;
+	top: 2px;
+	right: 2px; 
+	z-index: 651;
+	text-align: right;	
+}
+div.region_container_structure div.node_structure_manage:hover div.node_structure_menu{
+	display: block;
+}
+div.node_structure_menu img.structure_menu_gear {	
+	border: 1px solid transparent;
+	padding: 2px;
+	z-index: 650;	
+	-moz-border-radius: 4px 4px 4px 4px;
+	border-radius: 4px 4px 4px 4px;
+	transition: none !important;	
+}
+div.node_structure_menu:hover img.structure_menu_gear {	
+	background-color: rgb(102, 217, 239) !important;
+	border: 1px solid rgb(102, 217, 239);
+	padding: 2px;
+	border-bottom: none;	
+	-moz-border-radius: 4px 4px 0px 0px;
+	border-radius: 4px 4px 0px 0px;	
+}
+/*Display on hover*/
+div.node_structure_menu:hover .structure_menu_items{
+	display: block;
+}
+
+@-moz-document url-prefix() {
+	div.content_menu_items {
+		margin-top: -4px !important;
+	}
+}
+
+/*Delete Modal Dialog*/
+/*buttons*/
+a.cmsActionButton {
+
+	background: #EAEAEA;
+	background: -moz-linear-gradient(top, #EFEFEF, #D8D8D8) #D8D8D8;
+	background: -webkit-gradient(linear, left top, left bottom, from(#EFEFEF), to(#D8D8D8)) #D8D8D8;
+	background: linear-gradient(top, #EFEFEF, #D8D8D8) #D8D8D8;
+	border: 1px solid #ABABAB;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	-moz-box-shadow: 0 1px 2px rgba(0, 0, 0, .1), 0 1px 1px rgba(255, 255, 255, .8) inset;
+	-webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, .1), 0 1px 1px rgba(255, 255, 255, .8) inset;
+	box-shadow: 0 1px 2px rgba(0, 0, 0, .1), 0 1px 1px rgba(255, 255, 255, .8) inset;
+	color: #707070;
+	color: #303030;
+	text-decoration: none;
+	font-family: Helvetica, Arial, Geneva, sans-serif;
+	font-size: 12px;
+	
+	font-weight: bold;
+	margin: 0;
+	outline: none;
+	padding: 5px 10px;
+	text-align: center;
+	text-shadow: 0 1px 1px rgba(255, 255, 255, .5);
+	margin-top: 6px;
+	margin-bottom: 6px;
+	text-decoration: none !important;
+	-webkit-transition: border linear 0.2s, box-shadow linear 0.2s;
+	-moz-transition: border linear 0.2s, box-shadow linear 0.2s;
+	-o-transition: border linear 0.2s, box-shadow linear 0.2s;
+	transition: border linear 0.2s, box-shadow linear 0.2s;	
+	margin-right: 10px;
+	
+
+}	
+
+a.cmsActionButton:hover {
+    background: #f1f1f1 !important;
+    background: -moz-linear-gradient(top, #f6f6f6, #e3e3e3) #e3e3e3;
+    background: -webkit-gradient(linear, left top, left bottom, from(#f6f6f6), to(#e3e3e3)) #e3e3e3;
+    background: linear-gradient(top, #f6f6f6, #e3e3e3) #e3e3e3;
+    cursor: pointer;
+	-webkit-box-shadow: 0 0 8px rgba(0, 0, 0, 0.25), 0 1px 0 rgba(255,255,255,0.8) inset;
+	box-shadow: 0 0 8px rgba(0, 0, 0, 0.25), 0 1px 0 rgba(255,255,255,0.8) inset;
+	color: #303030 !important;
+	
+  }
+
+a.cmsActionButton:focus {
+    background: -moz-linear-gradient(top, #f6f6f6, #e3e3e3) #e3e3e3;
+    background: -webkit-gradient(linear, left top, left bottom, from(#f6f6f6), to(#e3e3e3)) #e3e3e3;
+    background: linear-gradient(top, #f6f6f6, #e3e3e3) #e3e3e3;
+    border: 1px solid #80bfff;
+    -moz-box-shadow: 0 0 3px #80bfff, 0 1px 1px rgba(255, 255, 255, .8) inset;
+    -webkit-box-shadow: 0 0 3px #80bfff, 0 1px 1px rgba(255, 255, 255, .8) inset;
+    box-shadow: 0 0 3px #80bfff, 0 1px 1px rgba(255, 255, 255, .8) inset;
+}
+  
+a.cmsActionButton:active {  
+	color: #1c4257; border: 1px solid #7096ab;
+	background: -moz-linear-gradient(top, #b9e0f5 0%, #92bdd6 100%); 
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#b9e0f5), color-stop(100%,#92bdd6)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #b9e0f5 0%,#92bdd6 100%); 
+	background: -o-linear-gradient(top, #b9e0f5 0%,#92bdd6 100%); 
+	background: -ms-linear-gradient(top, #b9e0f5 0%,#92bdd6 100%); 
+	background: linear-gradient(top, #b9e0f5 0%,#92bdd6 100%); 
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+}  
+
+a.cmsActionButton:visited{
+		color: #303030 !important;
+}
+ 
+a.cmsActionButton:disabled {
+    background: #efefef !important;
+    border: 1px solid #d1d1d1 !important;
+    -moz-box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    color: #aaa !important;
+    cursor: default;
+    text-shadow: 0 1px 1px #fff !important;
+}
+
+	.closeButton {
+		position: relative;
+		top: -10px;
+		right: -8px;
+		line-height: 20px;
+	}
+	.closeButton:hover, .closeButton:focus {
+		color: rgb(0, 0, 0);
+		text-decoration: none;
+		cursor: pointer;
+		opacity: 0.8;
+		filter: alpha(opacity=80);
+	}
+		a.closeButton {
+		font-weight: bold;
+		padding: 0;
+		cursor: pointer;
+		background: rgba(0, 0, 0, 0);
+		border: 0;
+		-webkit-appearance: none;
+	}
+	.closeButton {
+		float: right;
+		font-size: 20px;
+		font-weight: bold;
+		line-height: 20px;
+		color: rgb(0, 0, 0);
+		text-shadow: 0 1px 0 rgb(255, 255, 255);
+		opacity: 0.5;
+		filter: alpha(opacity=50);
+	}
+
+	a.closeButton {
+		text-decoration: none !important;
+		color: rgb(0, 0, 0) !important;
+	}
+	
+
+	div.cmsModalDialog {
+		margin: 0 auto;
+		margin-top: 50px;
+		position: relative;
+		
+		width: 500px;
+		height: 185px;
+
+		text-align: left;
+		color: rgb(95,95,95);
+
+
+		margin-bottom: 20px;
+		text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+		
+		-webkit-border-radius: 2px;
+		-moz-border-radius: 2px;
+		border-radius: 2px;
+
+		z-index: 750;
+		padding: 0px;
+		padding-top: 10px;
+		border: 1px solid rgb(190, 190, 190);
+		background: rgb(255, 255, 255);
+
+
+		box-shadow: 0 2px 2px rgba(0, 0, 0, .4);
+		-webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, .4);
+	}	
+
+	div.messageContainer{
+		position: relative;
+		padding: 20px;
+		padding-top: 10px;
+	}
+
+	div.messageContainer {
+		font-family: helvetica, arial;
+	}
+	div.messageContainer h2{
+		font-size: 22pt;
+	}
+	div.messageContainer p {
+		margin: 0 !important;
+		padding: 0 !important;
+		margin-bottom: 2px !important;
+				color: rgb(95,95,95) !important;
+	}
+	div.messageContainer h3{
+		margin-bottom: 7px;
+	}
+
+	div.messageContainer h2{
+		margin-bottom: 10px;
+	}
+
+	div.actionContainer {
+		position: absolute;
+		bottom: 0;
+		width: 100%;
+		height: 50px;
+		border-top: 1px solid rgb(192, 192, 192);
+		background-color: rgb(250, 250, 250);
+		background-image: -webkit-gradient(linear, 0 0, 0 100%, from(rgb(255, 255, 255)), to(rgb(230, 230, 230)));
+		margin: 0 auto;
+	}
+
+	div.actionContainerInner{
+		position: relative;
+
+		text-align: center;
+		margin-top: 15px;
+	}
+

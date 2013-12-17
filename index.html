@@ -4,6 +4,16 @@
 <title>Citizens KC</title>
 <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
 <script type="text/javascript" charset="utf-8" src="jquery-2.0.3.min.js"></script>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=0">
+
+    <link rel="stylesheet" type="text/css" href="./css/cssReset.css">
+    <link rel="stylesheet" type="text/css" href="./css/cms.css">
+    <link rel="stylesheet" type="text/css" href="./css/fontello.css">
+    <link rel="stylesheet" type="text/css" href="./css/home.layout.css">
+    <link rel="stylesheet" type="text/css" href="./css/home.style.css">
+    <link rel="stylesheet" type="text/css" href="./css/navigation_drawer.layout.css">
 <script type="text/javascript">
 
 //initialize jQuery on ready
@@ -56,32 +66,64 @@ $(document).ready(function() {
 });
 </script>
 <style>
-    body{
-        background-color: rgb(116, 155, 152);
-    }
     #no-network, #site-not-reachable{
         display: none;
     }
 </style>
 </head>
-<body>
-    <!-- Spinner animation -->
-    <div id="spinner">
-        <p>Spinner here</p>
-        <img src="spinner.gif"></img>
-    </div>
+<body data-resourceid="2" style="-webkit-user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+    <div class="structure_mode_background"></div>
+    <div class="backgrounder"></div>
+        <!-- header -->
+        <div class="header show-content" style="position: fixed;">
+            <button class="back" data-button="back">
+                <span class="">
+                    <img src="./css/kcbank_logo.gif" height="25">
+                </span>
+            </button>
+            <h1>Welcome</h1>            
+        </div>
+        <!-- /header -->
+    <div id="root-container">
+        <!-- nav -->
+        <!-- /nav -->
 
-    <!-- No network error message -->
-    <div id="no-network">
-        <h2>No Network. Please try again</h2>
-        <button>Retry</button>
-    </div>
+        <!-- content -->
+        <div class="content show-content" data-role="content">
+            <div class="inner-content" style="text-align:center;">
+                
+                <div id="spinner">
+                    <img style="text-align:center; margin: 0 auto;" src="./css/spinner.gif"></img>
+                </div>
+                <!-- No network error message -->
+                <div id="no-network">
+                    <h2>No Network. Please try again</h2>
+                    <button>Retry</button>
+                </div>
 
-    <!-- Network connects, but the site is unreachable -->
-    <div id="site-not-reachable">
-        <h2>The site is not reachable. Please try again</h2>
-        <button>Retry</button>
-    </div>
+                <!-- Network connects, but the site is unreachable -->
+                <div id="site-not-reachable">
+                    <h2>The site is not reachable. Please try again</h2>
+                    <button>Retry</button>
+                </div>
 
+            </div>
+        </div>
+        <!-- /content -->
+
+        <!--footer -->
+        <div class="footer  show-content" style="position: fixed;">
+            <div id="region_footer" class="region_container" data-name="footer" data-type="Global"></div>
+            <p align="center">
+                <img src="./css/nHarmonyFooter.png">
+            </p>
+        </div>
+        <!-- /footer -->
 </body>
+
 </html>
+
+
+
+
+

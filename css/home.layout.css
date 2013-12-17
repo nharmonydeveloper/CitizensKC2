@@ -1,0 +1,278 @@
+*{
+	font-family: sans-serif;
+	/*-webkit-user-select: none !important;*/
+}
+[class^="icon-"], [class*=" icon-"] {
+ 	display: none;
+}
+
+/*Required to hide the menu button and drawer from the user when not collapsed*/
+button.menu, button.back{
+	display: none;
+}
+.drawer-header{
+	display: none !important;
+}
+
+/*@media screen and (min-width: 951px){
+	#root-container{
+		width: 950px;
+		margin: 0 auto;
+	}
+	.inner-content img{
+		width: auto !important;
+	}
+}
+*/
+/*Media query - any viewport less than 950 pixels wide will load the following*/
+/*@media screen and (max-width: 950px) {	*/
+html{
+	background-color: rgb(221, 221, 221);
+}
+
+
+	div.backgrounder{
+		position: fixed;
+		height: 100%;
+		width: 100%;
+		background-color: rgb(116, 155, 152);
+	}
+	body{
+		overflow-x: hidden; /*required to hide the scrollbar when the drawer is offscreen*/
+		overflow-y: scrollbar;
+		background-color: rgb(221, 221, 221);
+	}
+
+	#root-container{
+		max-width: 650px;
+		margin: 0 auto;
+	}
+
+	/*Normalizing Margins*/
+	ul{
+		margin: .6em 0;
+		padding: 0 0 0 30px
+	}
+
+	/*Use font icons*/
+	[class^="icon-"], [class*=" icon-"] {
+	 	display: inline;
+	}	
+	/*Inside container for content - displays as rounded white section*/
+	.content{
+		/*padding: 25px;*/
+		padding: 15px;
+	}
+	.inner-content{
+		background-color: white;
+		padding: 25px;
+/*		border-top-right-radius:10px;*/
+		border-radius: 10px;
+		margin-top: 54px;
+/*		border: 1px solid #999;
+		border-top:30px solid #ccc;*/
+	}
+	/*iOS fixed menu bars styles*/
+	.header, .footer{
+		border: 1px solid #2E837C;
+		background: #74b042;
+		color: #fff;
+		font-weight: bold;
+		text-shadow: 0 1px 1px rgb(0, 53, 33);
+		background-image: -webkit-gradient(linear, left top, left bottom, from(#2E837C), to(rgb(0, 83, 73)));
+		background-image: -webkit-linear-gradient(#2E837C, rgb(0, 83, 73));
+		background-image: -moz-linear-gradient(#2E837C, rgb(0, 83, 73));
+		background-image: -ms-linear-gradient(#2E837C, rgb(0, 83, 73));
+		background-image: -o-linear-gradient(#2E837C, rgb(0, 83, 73));
+		background-image: linear-gradient(#2E837C, rgb(0, 83, 73));	
+		padding: 5px 0px;	
+		border-right: none;
+        -webkit-user-select: none; 
+	}
+	.header{
+		position:absolute;
+		width: 100%;
+		z-index: 9;
+		top: 0px;
+		left: 0px;
+		right: 0px;		
+	}
+	.header h1{
+		min-height: 1.1em;
+		text-align: center;
+		font-size: 16px;
+		display: block;
+		margin: .6em 30% .8em;
+		padding: 0;
+		text-overflow: ellipsis;
+		overflow: hidden;
+		white-space: nowrap;
+		outline: 0 !important;
+	}
+	.footer{
+		border-left-width: 0;
+		border-right-width: 0;
+		bottom: -1px;
+		padding-bottom: 1px;
+		left: 0;
+		right: 0;
+		width: 100%;
+		position: fixed;
+		z-index: 998;
+		zoom: 1;
+	}
+
+	/*--Main content styles--*/
+	.inner-content p{
+		font-size: 12pt;
+		font-weight: 100;
+		line-height: 1.5em;
+	}
+
+	/*--Back Button--*/
+	button.back{
+		cursor: pointer;
+		display: inline-block;
+		margin: 0;
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		padding: 11px;
+		background: none;
+		border: none;
+		color: white;
+		outline: none;
+	}
+	button.back span{
+		font-size: 18pt;
+	}	
+
+	/*--Drawer styles--*/
+	button.menu{
+		cursor: pointer;
+		display: inline-block;
+		margin: 0;
+		position: absolute;
+		top: 0px;
+		right: 0px;
+		padding: 11px;
+		background: none;
+		border: none;
+		color: white;
+		outline: none;
+	}
+	button.menu span{
+		font-size: 18pt;
+	}
+
+	.drawer-header{
+		display: block !important;
+		color: white;
+		font-weight:bold;
+	}
+
+	.sidebar-nav{
+		position: absolute;
+		display: block;
+		top: 0px;
+		bottom: 0px;
+		right: 0;
+		z-index: 999;
+
+		width: 17em;
+		min-height: 100%;
+
+		background-color: #474747;
+		border-width: 0;
+
+		/*3d transforms used so that we can ignore recalculating positon/width of individual sections*/
+		-webkit-backface-visibility: hidden;
+		-webkit-transition: -webkit-transform 350ms ease;	
+		   -moz-transition: -moz-transform 350ms ease;
+				transition: transform 350ms ease;	
+
+		-webkit-transform: translate3d(17em,0,0);
+		   -moz-transform: translate3d(17em,0,0);
+				transform: translate3d(17em,0,0);
+	}
+
+	.sidebar-nav ul{
+		margin: 0px;
+		padding: 0px
+	}
+
+	.show-drawer{
+		-webkit-transform: translate3d(0,0,0);
+		   -moz-transform: translate3d(0,0,0);
+				transform: translate3d(0,0,0);
+	}
+	.show-content{
+		-webkit-transition: -webkit-transform 350ms ease;	
+		   -moz-transition: -moz-transform 350ms ease;
+				transition: transform 350ms ease;		
+
+		-webkit-transform: translate3d(0,0,0);
+		   -moz-transform: translate3d(0,0,0);
+				transform: translate3d(0,0,0);
+	}
+
+	.move-content{
+		-webkit-transform: translate3d(-17em,0,0);
+		   -moz-transform: translate3d(-17em,0,0);
+				transform: translate3d(-17em,0,0);
+	}
+
+	.move-contenta23{
+		-webkit-transform: translate3d(-17em,0,0);
+		   -moz-transform: translate3d(-17em,0,0);
+				transform: translate3d(-17em,0,0);
+	}
+
+	.move-content-ie{
+		margin-left: -17em;
+	}
+	.move-main-content-ie{
+		margin-left: -17em;
+		margin-right: 17em;
+	}
+	nav.horizontal li{
+		display: block;
+		padding-left: 0px;
+		margin: 0px;
+	}		
+
+	nav.horizontal li a{
+		color:white;
+		text-decoration: none;
+		border-bottom: 1px solid gray;
+		display: block;
+		padding: 15px;
+	}
+
+	nav.horizontal li a:hover{
+		background-color: #797E7D;
+	}
+
+	nav.horizontal li ul li {
+		padding-left: 0px;
+		/*Testing. Remove if not wanted*/
+		display: none;
+	}
+	.noscroll{
+	overflow:hidden !important;
+	/*display: none !important;*/
+	}
+div.iOS7-header{
+	background-color: white;
+	position: fixed;
+	height: 20px;
+	width: 100%;
+	top: 0;
+	z-index: 9999;
+}
+/*}*/
+/*End max:950px Media Query*/	
+
+
+/*}*/
+
