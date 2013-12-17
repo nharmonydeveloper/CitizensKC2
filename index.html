@@ -3,30 +3,70 @@
 <head>
 <title>Citizens KC</title>
 <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+<script type="text/javascript" charset="utf-8" src="jquery-2.0.3.min.js"></script>
 <script type="text/javascript">
 
-document.addEventListener("deviceready", onDeviceReady, false);
+//initialize jQuery on ready
+$(document).ready(function() {
 
-function onDeviceReady(){
-    checkConnection();    
-}
+    /*Variables*/
+    var site = "http://clients.nharmony.com/";
 
-function checkConnection() {
-    var networkState = navigator.connection.type;
 
-    if( networkState === 'NONE'){
-        //reveal design here
+    //initialize Cordova
+    document.addEventListener("deviceready", onDeviceReady, false);
+
+    //separated out to allow other checks in the future
+    function onDeviceReady(){
+        checkConnection();    
     }
-    else {
-        window.location.href="http://clients.nharmony.com/";
+
+    //Checks the connection and displays appropriate messages
+    function checkConnection() {    
+       /* Cordova's network manager. Needs permissions in config.xml. 
+        * Documentation @ http://docs.phonegap.com/en/3.0.0/cordova_connection_connection.md.html */
+        var networkState = navigator.connection.type;
+
+        if( networkState === 'NONE'){
+            $('div#no-network').css('display','block');
+        }
+        else {  
+            //Check to make sure the site is reachable
+            $.ajax({ 
+                url: site, 
+                complete: function(xhr, statusText) { 
+                    alert(xhr.status); 
+                } 
+            }); 
+
+            // if (error is <400){
+            // $('div#site-not-reachable').css('display','block');
+            // }
+            // else{
+            //     window.location.href=site;
+            // }
+        }
     }
 }
-
 </script>
 </head>
 <body>
+    <!-- Spinner animation -->
+    <div id="spinner">
+        <img src="spinner.gif"></img>
+    </div>
+
+    <!-- No network error message -->
     <div id="no-network">
         <h2>No Network. Please try again</h2>
+        <button>Retry</button>
     </div>
+
+    <!-- Network connects, but the site is unreachable -->
+    <div id="site-not-reachable">
+        <h2>The site is not reachable. Please try again</h2>
+        <button>Retry</button>
+    </div>
+
 </body>
 </html>
